@@ -27,15 +27,15 @@ public class Order {
     @Column(name = "number")
     private int number;
 
-    public Order(long consumer_id, long product_id,long actualProductPrice,int number) {
-        this.consumerId=consumer_id;
-        this.productId=product_id;
-        this.actualProductPrice=actualProductPrice;
-        this.number=number;
+    public Order(long consumer_id, long product_id, long actualProductPrice, int number) {
+        this.consumerId = consumer_id;
+        this.productId = product_id;
+        this.actualProductPrice = actualProductPrice;
+        this.number = number;
     }
 
     @Override
     public String toString() {
-        return String.format("Order [id = %d, consumer_id = %d, product_id=%d, actual_price=%d, number=%d]", id,consumerId,productId,actualProductPrice,number);
+        return String.format("Order [id = %d, consumer_id = %d, product_id=%d, actual_price=%d, number=%d]", id, consumerId, productId, actualProductPrice, number);
     }
 }

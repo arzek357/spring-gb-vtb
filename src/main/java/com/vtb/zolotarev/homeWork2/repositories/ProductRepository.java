@@ -7,10 +7,10 @@ import org.hibernate.SessionFactory;
 public class ProductRepository {
     private static SessionFactory factory;
 
-    public void deleteProduct(String name){
-        try(Session session = factory.getCurrentSession()){
+    public void deleteProduct(String name) {
+        try (Session session = factory.getCurrentSession()) {
             session.beginTransaction();
-            session.delete(session.createQuery("SELECT p FROM Product p WHERE p.name LIKE :name").setParameter("name",name).getSingleResult());
+            session.delete(session.createQuery("SELECT p FROM Product p WHERE p.name LIKE :name").setParameter("name", name).getSingleResult());
             session.getTransaction().commit();
         }
     }
@@ -24,10 +24,10 @@ public class ProductRepository {
         }
     }
 
-    public Product findProductById(long id){
+    public Product findProductById(long id) {
         try (Session session = factory.getCurrentSession()) {
             session.beginTransaction();
-            Product product = session.get(Product.class,id);
+            Product product = session.get(Product.class, id);
             session.getTransaction().commit();
             return product;
         }

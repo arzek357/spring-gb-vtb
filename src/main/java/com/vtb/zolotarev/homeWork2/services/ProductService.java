@@ -44,7 +44,7 @@ public class ProductService {
         }
     }
 
-    public static Product findProductById(long id){
+    public static Product findProductById(long id) {
         return productRepository.findProductById(id);
     }
 }

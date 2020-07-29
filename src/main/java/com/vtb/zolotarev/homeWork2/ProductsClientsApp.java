@@ -73,7 +73,7 @@ public class ProductsClientsApp {
     }
 
     private void printCommandsInfo() {
-        System.out.println(String.format("1) %s\n2) %s\n3) %s\n4) %s\n5) %s",
+        System.out.println(String.format("1) %s\n2) %s\n3) %s\n4) %s\n5) %s\n6) %s",
                 "/showProductsByConsumer имя_покупателя - распечатать в консоль товары, которые приобрел покупатель, по имени покупателя",
                 "/showConsumersByProductTitle название_товара - распечатать имена покупателей, купивших указанный товар, по названию товара",
                 "/deleteConsumer (/deleteProduct) имя_элемента - удалить из базы товары/покупателей по названию/имени",

@@ -24,10 +24,10 @@ public class ConsumerRepository {
         }
     }
 
-    public Consumer findConsumerById(long id){
+    public Consumer findConsumerById(long id) {
         try (Session session = factory.getCurrentSession()) {
             session.beginTransaction();
-            Consumer consumer = session.get(Consumer.class,id);
+            Consumer consumer = session.get(Consumer.class, id);
             session.getTransaction().commit();
             return consumer;
         }

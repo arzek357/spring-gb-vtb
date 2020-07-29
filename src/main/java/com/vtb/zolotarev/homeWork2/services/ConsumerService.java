@@ -4,10 +4,8 @@ import com.vtb.zolotarev.homeWork2.entity.Consumer;
 import com.vtb.zolotarev.homeWork2.entity.Product;
 import com.vtb.zolotarev.homeWork2.repositories.ConsumerRepository;
 import com.vtb.zolotarev.homeWork2.utils.FeaturesForServices;
-import org.hibernate.Session;
 
 import javax.persistence.NoResultException;
-import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -46,7 +44,7 @@ public class ConsumerService {
         }
     }
 
-    public Consumer findConsumerById(long id){
+    public Consumer findConsumerById(long id) {
         return consumerRepository.findConsumerById(id);
     }
 
