@@ -1,4 +1,4 @@
-package com.vtb.zolotarev.homeWork3.validation;
+package com.vtb.zolotarev.homeWork5.validation;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -16,7 +16,7 @@ public class PrepareDataApp {
                 .buildSessionFactory();
         Session session = null;
         try {
-            String sql = Files.lines(Paths.get("src","main","resources","homeWork3","full.sql")).collect(Collectors.joining(" "));
+            String sql = Files.lines(Paths.get("src","main","resources","homeWork5","full.sql")).collect(Collectors.joining(" "));
             session = factory.getCurrentSession();
             session.beginTransaction();
             session.createNativeQuery(sql).executeUpdate();
