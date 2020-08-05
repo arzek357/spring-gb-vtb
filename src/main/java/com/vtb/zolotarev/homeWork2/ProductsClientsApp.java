@@ -84,7 +84,7 @@ public class ProductsClientsApp {
 
     private void initRepositories() {
         factory = new Configuration()
-                .configure("config/hibernate.cfg.xml")
+                .configure("homeWork2/config/hibernate.cfg.xml")
                 .buildSessionFactory();
         ConsumerRepository.setFactory(factory);
         OrderRepository.setFactory(factory);

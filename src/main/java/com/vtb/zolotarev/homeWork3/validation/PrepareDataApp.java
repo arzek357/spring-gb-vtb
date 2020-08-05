@@ -1,4 +1,4 @@
-package com.vtb.zolotarev.homeWork2.validation;
+package com.vtb.zolotarev.homeWork3.validation;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -12,11 +12,11 @@ import java.util.stream.Collectors;
 public class PrepareDataApp {
     public static void forcePrepareData() {
         SessionFactory factory = new Configuration()
-                .configure("homeWork2/config/hibernate.cfg.xml")
+                .configure("homeWork3/config/hibernate.cfg.xml")
                 .buildSessionFactory();
         Session session = null;
         try {
-            String sql = Files.lines(Paths.get("src","main","resources","homeWork2","full.sql")).collect(Collectors.joining(" "));
+            String sql = Files.lines(Paths.get("src","main","resources","homeWork3","full.sql")).collect(Collectors.joining(" "));
             session = factory.getCurrentSession();
             session.beginTransaction();
             session.createNativeQuery(sql).executeUpdate();
